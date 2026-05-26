@@ -92,6 +92,7 @@ function injectEmailSimulator() {
       </div>
     </div>
   `;
+  // -musa-
 
   const widgetContainer = document.createElement('div');
   widgetContainer.id = 'email-simulator-widget';
