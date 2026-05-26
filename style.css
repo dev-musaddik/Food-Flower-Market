@@ -1053,27 +1053,38 @@ img {
 /* Page: SUBSCRIPTION BOXES */
 .pricing-tabs {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem auto;
+  max-width: fit-content;
+  background-color: var(--primary-color);
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  padding: 0.35rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow-sm);
 }
 
 .pricing-tab-btn {
   background: none;
-  border: 1px solid var(--border-color);
+  border: none;
   padding: 0.75rem 2rem;
   font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   cursor: pointer;
   border-radius: 50px;
+  color: rgba(255, 255, 255, 0.7);
   transition: var(--transition-smooth);
 }
 
-.pricing-tab-btn.active {
-  background-color: var(--primary-color);
+.pricing-tab-btn:hover {
   color: var(--white);
-  border-color: var(--primary-color);
+}
+
+.pricing-tab-btn.active {
+  background-color: var(--accent-gold);
+  color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.25);
 }
 
 .step-signup {
@@ -1627,4 +1638,231 @@ img {
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease forwards;
+}
+
+/* Scrolled Header State */
+.header-scrolled {
+  box-shadow: 0 10px 30px rgba(11, 26, 48, 0.15) !important;
+}
+
+/* Gold Button Shimmer Accent */
+.btn-gold {
+  position: relative;
+  overflow: hidden;
+}
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+.btn-gold:hover::after {
+  left: 130%;
+  transition: all 0.8s ease-in-out;
+}
+
+/* Email Simulator Widget Floating UI */
+.email-sim-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 10px 30px rgba(11, 26, 48, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 9999;
+  transition: var(--transition-smooth);
+}
+.email-sim-btn:hover {
+  transform: scale(1.08) rotate(5deg);
+  background-color: var(--primary-light);
+}
+.email-sim-btn.pulse {
+  animation: pulseSim 1s ease-in-out;
+}
+.email-sim-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--accent-gold);
+  color: var(--primary-color);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-color);
+}
+
+.email-sim-panel {
+  position: fixed;
+  bottom: 6.5rem;
+  left: 2rem;
+  width: 380px;
+  max-width: calc(100vw - 4rem);
+  background-color: var(--primary-color);
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(11, 26, 48, 0.4);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+.email-sim-panel.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.email-sim-header {
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+.email-sim-header h4 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-gold);
+  margin: 0;
+}
+.email-sim-header button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+.email-sim-header button:hover {
+  color: var(--white);
+}
+
+.email-sim-body {
+  padding: 1.25rem;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* Custom Scrollbar for Panel */
+.email-sim-body::-webkit-scrollbar {
+  width: 6px;
+}
+.email-sim-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+.email-sim-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.email-log-empty {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  padding: 2rem 0;
+}
+
+.email-log-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.email-log-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.4rem;
+}
+.log-tag {
+  font-size: 0.65rem;
+  background-color: rgba(197, 168, 128, 0.15);
+  color: var(--accent-gold);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.log-time {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.email-log-field {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.email-log-field strong {
+  color: var(--accent-gold);
+}
+.email-log-body {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 0.6rem;
+  border-radius: 4px;
+  border-left: 2px solid var(--accent-gold);
+  margin-top: 0.5rem;
+}
+
+.email-sim-footer {
+  padding: 0.85rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.btn-clear-logs {
+  background: none;
+  border: none;
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.btn-clear-logs:hover {
+  color: var(--white);
+}
+
+@keyframes pulseSim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); box-shadow: 0 0 25px rgba(197, 168, 128, 0.6); }
+  100% { transform: scale(1); }
 }

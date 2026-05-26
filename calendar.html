@@ -429,82 +429,6 @@
 
   <!-- Scripts -->
   <script>
-    // Click date logic to prefill form
-    function selectCalendarDate(dayNum, existingEventName = '') {
-      // Highlights selected date in the widget
-      const allDays = document.querySelectorAll('.calendar-large-day');
-      allDays.forEach(day => {
-        day.style.borderColor = 'var(--border-color)';
-        day.style.backgroundColor = '';
-      });
-      
-      // Target active day element
-      const selectedIndex = dayNum - 1; // 0-based
-      if (allDays[selectedIndex]) {
-        allDays[selectedIndex].style.borderColor = 'var(--accent-gold)';
-        allDays[selectedIndex].style.backgroundColor = 'var(--bg-sand)';
-      }
-      
-      // Update form values
-      const dateInput = document.getElementById('reminder-date');
-      dateInput.value = 'June ' + dayNum + ', 2026';
-      
-      const recipientInput = document.getElementById('reminder-recipient');
-      const occasionSelect = document.getElementById('reminder-occasion');
-      const messageText = document.getElementById('reminder-message');
-      
-      if (existingEventName) {
-        recipientInput.value = existingEventName.split("'")[0] || 'My Recipient';
-        if (existingEventName.toLowerCase().includes('birthday')) {
-          occasionSelect.value = 'Birthday';
-        } else if (existingEventName.toLowerCase().includes('anniversary')) {
-          occasionSelect.value = 'Anniversary';
-        } else {
-          occasionSelect.value = 'Corporate';
-        }
-      } else {
-        recipientInput.value = '';
-        occasionSelect.value = 'Birthday';
-      }
-      
-      suggestGiftBox();
-      recipientInput.focus();
-    }
-
-    // Dynamic Suggestion based on occasion type
-    function suggestGiftBox() {
-      const occasion = document.getElementById('reminder-occasion').value;
-      const giftSelect = document.getElementById('reminder-gift');
-      
-      if (occasion === 'Anniversary') {
-        giftSelect.value = 'Royal'; // Suggest Royal Treat box
-      } else if (occasion === 'Corporate' || occasion === 'Holiday') {
-        giftSelect.value = 'Imperial'; // Suggest Imperial Box
-      } else {
-        giftSelect.value = 'Oasis'; // Suggest Oasis Box
-      }
-    }
-
-    // Save Reminder Event
-    function saveReminderEvent(e) {
-      e.preventDefault();
-      const recipient = document.getElementById('reminder-recipient').value;
-      const date = document.getElementById('reminder-date').value;
-      const gift = document.getElementById('reminder-gift').options[document.getElementById('reminder-gift').selectedIndex].text.split(' (£')[0];
-      
-      // Add to list dynamically
-      const list = document.getElementById('saved-reminders-list');
-      const newItem = document.createElement('li');
-      newItem.style.marginBottom = '0.5rem';
-      newItem.style.animation = 'fadeIn 0.5s ease forwards';
-      newItem.innerHTML = `<i class="fa-solid fa-calendar-check" style="color: var(--accent-gold);"></i> <strong>${date.split(',')[0]}:</strong> ${recipient}'s Event - Scheduled ${gift}`;
-      list.appendChild(newItem);
-      
-      alert(`Gifting reminder saved successfully! We'll alert you 7 days before ${date}.`);
-      document.getElementById('reminder-main-form').reset();
-      document.getElementById('reminder-date').value = 'June 1, 2026';
-    }
-
     // Mobile Navigation logic
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu-list');
@@ -529,5 +453,6 @@
       }
     });
   </script>
+  <script src="app.js"></script>
 </body>
 </html>

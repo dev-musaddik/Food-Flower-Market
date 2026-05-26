@@ -363,7 +363,7 @@
           <span class="hero-badge" style="background-color: var(--accent-gold-hover); color: var(--white); border-color: var(--accent-gold);">Join The Connoisseur Club</span>
           <h2 style="margin-top: 1rem;">Receive Gifting Tips & Season Previews</h2>
           <p>Subscribe to get exclusive access to our seasonal exotic fruit arrivals, floral arrangement inspiration, and limited-edition holiday boxes.</p>
-          <form class="newsletter-form" id="newsletter-form-home" style="background-color: var(--white); border-color: var(--border-color);" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Food Flower Market!');">
+          <form class="newsletter-form" id="newsletter-form-home" style="background-color: var(--white); border-color: var(--border-color);" onsubmit="event.preventDefault(); submitNewsletter(this.querySelector('input').value); alert('Thank you for subscribing to Food Flower Market!'); this.reset();">
             <input type="email" placeholder="Your premium email address" class="newsletter-input" style="color: var(--text-dark);" required aria-label="Newsletter Email Input">
             <button type="submit" class="newsletter-btn" id="newsletter-submit-btn">Subscribe</button>
           </form>
@@ -456,5 +456,6 @@
       }
     });
   </script>
+  <script src="app.js"></script>
 </body>
 </html>

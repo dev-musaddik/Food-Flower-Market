@@ -206,6 +206,15 @@
       </div>
     </section>
 
+    <!-- Active Subscriptions Dashboard Section -->
+    <section class="section section-alt" id="dashboard-section" style="padding: 5rem 0;">
+      <div class="container" style="max-width: 800px;">
+        <div id="active-subscriptions-dashboard">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="section" id="faq-section">
       <div class="container">
@@ -279,7 +288,7 @@
     <div style="background: white; border-radius: var(--radius-lg); padding: 3rem; max-width: 500px; width: 90%; box-shadow: var(--shadow-lg); relative;">
       <h3 style="margin-bottom: 1rem;" id="modal-title">Complete Checkout</h3>
       <p style="font-size: 0.95rem; margin-bottom: 2rem;">You have selected <strong id="modal-box-name"></strong> at <strong id="modal-box-price"></strong>. Please confirm your subscription frequency:</p>
-      <form onsubmit="event.preventDefault(); alert('Subscription activated! Welcome to Food Flower Market.'); document.getElementById('checkout-modal').style.display='none';">
+      <form onsubmit="submitCheckout(event)">
         <div class="form-group">
           <label for="modal-delivery-frequency">Billing Frequency</label>
           <select id="modal-delivery-frequency">
@@ -296,7 +305,7 @@
           <input type="text" id="modal-delivery-address" placeholder="123 Luxury Lane, London" required>
         </div>
         <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-          <button type="button" class="btn btn-secondary" style="flex-grow: 1;" onclick="document.getElementById('checkout-modal').style.display='none';">Cancel</button>
+          <button type="button" class="btn btn-secondary" style="flex-grow: 1;" onclick="closeCheckoutModal()">Cancel</button>
           <button type="submit" class="btn btn-gold" style="flex-grow: 1;">Subscribe Now</button>
         </div>
       </form>
@@ -447,5 +456,6 @@
       }
     });
   </script>
+  <script src="app.js"></script>
 </body>
 </html>
