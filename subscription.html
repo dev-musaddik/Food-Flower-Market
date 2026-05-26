@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Gift Subscription Boxes | Premium Exotic Fruit Gifts</title>
+  <meta name="description" content="Choose the perfect fruit gift subscription. Explore monthly and quarterly boxes featuring premium exotic fruit gifts paired with seasonal flowers.">
+  <meta name="keywords" content="Fruit Gift Subscription, Exotic Fruit Gifts, Exotic Fruit Subscription, Healthy Gift Baskets, Premium Fruit Delivery">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" id="nav-logo-link">
+        <img src="images/logo.jpg" alt="Food Flower Market Logo" class="logo-img">
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link" id="link-home">Home</a></li>
+          <li><a href="subscription.html" class="nav-link active" id="link-subscription">Subscription Boxes</a></li>
+          <li><a href="calendar.html" class="nav-link" id="link-calendar">Gifting Calendar</a></li>
+          <li><a href="about.html" class="nav-link" id="link-about">About Us</a></li>
+          <li><a href="contact.html" class="nav-link" id="link-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="subscription.html" class="btn btn-gold" id="header-cta-btn">Subscribe Now</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="contact-hero-banner" aria-label="Subscription Page Banner">
+      <div class="container">
+        <span class="hero-badge" style="background-color: rgba(197, 168, 128, 0.15); color: var(--accent-gold); border-color: var(--accent-gold);">Tailored Gifting Experience</span>
+        <h1 style="margin-top: 0.5rem; margin-bottom: 1rem;">Choose Your Perfect Fruit Gift Subscription</h1>
+        <p style="max-width: 700px; margin: 0 auto; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+          Send the gift of health and wellness with our premium curated exotic fruit gifts. Paired with seasonal flowers and delivered on a schedule that suits you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Subscription Plans Grid -->
+    <section class="section" id="plans-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Select Your Gifting Plan</h2>
+          <p>Toggle between monthly deliveries for regular health boosts or quarterly boxes matching key seasonal changes.</p>
+        </div>
+
+        <!-- Billing Cycle Tab Controls -->
+        <div class="pricing-tabs" id="pricing-plan-tabs">
+          <button class="pricing-tab-btn active" id="btn-monthly" onclick="togglePricing('monthly')">Monthly Deliveries</button>
+          <button class="pricing-tab-btn" id="btn-quarterly" onclick="togglePricing('quarterly')">Quarterly Deliveries (Save 10%)</button>
+        </div>
+
+        <div class="box-grid">
+          <!-- Box 1: Seasonal Delight -->
+          <div class="box-card">
+            <div class="box-img-container">
+              <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&q=80&w=800" alt="Fresh tropical fruits including mangoes, papaya, and sweet banana in a subscription box" class="box-img">
+              <span class="box-badge">Wellness Focused</span>
+            </div>
+            <div class="box-info">
+              <div class="box-meta">
+                <span class="box-price" id="price-oasis">£65.00</span>
+                <span class="box-frequency" id="freq-oasis">Per Month</span>
+              </div>
+              <h3>The Seasonal Oasis Box</h3>
+              <p>A beautiful variety of seasonal fruits including succulent Brazilian mangoes and golden physalis, paired with a custom-selected floral stem arrangement.</p>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-color);">Gifting Customization Options:</h4>
+                <ul class="features-list" style="margin: 0; font-size: 0.85rem;">
+                  <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="font-size: 0.9rem;"></i> Choose flower color scheme (Warm / Pastel)</li>
+                  <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="font-size: 0.9rem;"></i> Exclude citrus / nut allergens if needed</li>
+                </ul>
+              </div>
+
+              <div class="box-tags">
+                <span class="box-tag">Vitamins A & C</span>
+                <span class="box-tag">Digestive Health</span>
+                <span class="box-tag">Seasonal Blooms</span>
+              </div>
+              <button class="btn btn-primary box-btn" onclick="openCheckout('Oasis Box', '£65.00')">Select This Box</button>
+            </div>
+          </div>
+
+          <!-- Box 2: Golden Imperial -->
+          <div class="box-card" style="border-color: var(--accent-gold); box-shadow: var(--shadow-md);">
+            <div class="box-img-container">
+              <img src="images/fruit_bowl.jpg" alt="Antioxidant rich exotic fruits featuring mangosteen, starfruit, and granadilla in healthy gift baskets" class="box-img">
+              <span class="box-badge" style="background-color: var(--accent-gold); color: var(--primary-color);">Signature Classic</span>
+            </div>
+            <div class="box-info">
+              <div class="box-meta">
+                <span class="box-price" id="price-imperial">£95.00</span>
+                <span class="box-frequency" id="freq-imperial">Per Month</span>
+              </div>
+              <h3>The Golden Imperial Box</h3>
+              <p>Our hallmark luxury presentation. Features rare mangosteens, fresh starfruit, granadillas, and sweet pineapples. Accpanied by a premium hand-arranged floral centerpiece.</p>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-color);">Gifting Customization Options:</h4>
+                <ul class="features-list" style="margin: 0; font-size: 0.85rem;">
+                  <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="font-size: 0.9rem;"></i> Custom greeting card handwriting</li>
+                  <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="font-size: 0.9rem;"></i> Choose floral centerpiece size</li>
+                </ul>
+              </div>
+
+              <div class="box-tags">
+                <span class="box-tag">Immune Boosting</span>
+                <span class="box-tag">Superfoods Included</span>
+                <span class="box-tag">Designer Arrangement</span>
+              </div>
+              <button class="btn btn-gold box-btn" onclick="openCheckout('Imperial Box', '£95.00')">Select This Box</button>
+            </div>
+          </div>
+
+          <!-- Box 3: Royal Treat & Flora -->
+          <div class="box-card">
+            <div class="box-img-container">
+              <img src="images/pastries.jpg" alt="Premium gourmet cronuts and pastries paired with fresh flowers and fruits" class="box-img">
+              <span class="box-badge">Ultimate Indulgence</span>
+            </div>
+            <div class="box-info">
+              <div class="box-meta">
+                <span class="box-price" id="price-royal">£120.00</span>
+                <span class="box-frequency" id="freq-royal">Per Month</span>
+              </div>
+              <h3>The Royal Treat & Flora Box</h3>
+              <p>The peak of luxury gifting. Combining selected exotic fruit varieties, fresh artisan cronuts and pastries, organic honeycomb, and a grand designer flower bouquet.</p>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-color);">Gifting Customization Options:</h4>
+                <ul class="features-list" style="margin: 0; font-size: 0.85rem;">
+                  <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="font-size: 0.9rem;"></i> Gluten-free pastry substitutions</li>
+                  <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-check" style="font-size: 0.9rem;"></i> Premium champagne add-on option</li>
+                </ul>
+              </div>
+
+              <div class="box-tags">
+                <span class="box-tag">Bakery Pairing</span>
+                <span class="box-tag">Elite Celebration Size</span>
+                <span class="box-tag">Stunning Masterpiece</span>
+              </div>
+              <button class="btn btn-primary box-btn" onclick="openCheckout('Royal Treat Box', '£120.00')">Select This Box</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step-by-Step Sign-up Process -->
+    <section class="section section-alt step-signup" id="signup-process">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Seamless Gift Activation Process</h2>
+          <p>Ordering a fruit gift subscription is simple. We handle everything from calendar reminders to fresh door delivery.</p>
+        </div>
+        
+        <div class="step-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Select Your Box Size</h3>
+            <p>Choose from our Seasonal, Imperial, or Royal configurations, depending on the scale of your occasion.</p>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Tailor The Content</h3>
+            <p>Customize dietary details, select flower palettes, or add sweet treats like freshly made pastries.</p>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Set Gifting Reminders</h3>
+            <p>Input special occasion dates into our reminder service. We automatically prepare and schedule shipments.</p>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>Handmade Delivery</h3>
+            <p>Your box is hand-packed in cooling liners, loaded into temperature-controlled vehicles, and delivered fresh.</p>
+          </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 4rem;">
+          <a href="calendar.html" class="btn btn-gold" id="steps-cta-btn">Access Gifting Calendar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Subscription FAQs</h2>
+          <p>Have questions about how our premium fruit delivery and custom box gifting plans work? Find your answers here.</p>
+        </div>
+        
+        <div class="faq-grid" id="faq-accordion-group">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>How are the exotic fruits sourced and selected?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We work directly with certified organic and fair-trade orchards globally. Our team inspects every crop of Segundo Frutas mangoes, mangosteen, and granadilla. Only the top 5% of harvested fruit—judged by brix sweetness levels, skin purity, and size—is chosen for our subscriptions.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>Can I customize the items or substitute pastries for gluten-free diets?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely. During checkout or in your member profile, you can request customizations. You can swap out elements (e.g., replace our artisan pastries with gluten-free cronuts or organic honey) and request strict floral color palettes to match the recipient's interior aesthetic.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>How does the Gift Reminder Service integrate with my subscription?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>When you set up your Gifting Calendar, you can link specific boxes to key dates (such as birthdays or anniversaries). Instead of a standard monthly box arriving on a random date, we automatically adjust your shipping cycle so that the box arrives exactly on the day of the special occasion.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>What happens if a fruit or flower variety is out of season?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Due to natural crop seasons, box contents shift. However, we guarantee that any replacement fruit or flower will match or exceed the premium value of the scheduled item. We will always notify you ahead of shipment with a list of ingredients in your box.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>How do you guarantee freshness during delivery?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We ship all healthy gift baskets in custom insulated cases with reusable non-toxic ice gel pads. This maintains a steady 8°C environment. Furthermore, local deliveries in London are handled by our dedicated fleet, bypassing regular postal routes to ensure next-day arrival.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Checkout Mockup Modal -->
+  <div id="checkout-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11,26,48,0.7); z-index: 2000; align-items: center; justify-content: center; backdrop-filter: blur(5px);">
+    <div style="background: white; border-radius: var(--radius-lg); padding: 3rem; max-width: 500px; width: 90%; box-shadow: var(--shadow-lg); relative;">
+      <h3 style="margin-bottom: 1rem;" id="modal-title">Complete Checkout</h3>
+      <p style="font-size: 0.95rem; margin-bottom: 2rem;">You have selected <strong id="modal-box-name"></strong> at <strong id="modal-box-price"></strong>. Please confirm your subscription frequency:</p>
+      <form onsubmit="event.preventDefault(); alert('Subscription activated! Welcome to Food Flower Market.'); document.getElementById('checkout-modal').style.display='none';">
+        <div class="form-group">
+          <label for="modal-delivery-frequency">Billing Frequency</label>
+          <select id="modal-delivery-frequency">
+            <option>Monthly (Standard)</option>
+            <option>Quarterly (10% Discount applied)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modal-recipient-name">Recipient Name</label>
+          <input type="text" id="modal-recipient-name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-delivery-address">Delivery Address</label>
+          <input type="text" id="modal-delivery-address" placeholder="123 Luxury Lane, London" required>
+        </div>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+          <button type="button" class="btn btn-secondary" style="flex-grow: 1;" onclick="document.getElementById('checkout-modal').style.display='none';">Cancel</button>
+          <button type="submit" class="btn btn-gold" style="flex-grow: 1;">Subscribe Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="images/logo.jpg" alt="Food Flower Market Footer Logo" class="footer-logo">
+          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Food Flower Market delivers the ultimate premium luxury gifting experience. Curated exotic fruits paired with artisanal fresh blooms delivered straight to your door.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="subscription.html">Subscription Boxes</a></li>
+            <li><a href="calendar.html">Gifting Calendar</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Keywords</h4>
+          <ul class="footer-links" style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+            <li>Exotic Fruit Subscription</li>
+            <li>Healthy Gift Baskets</li>
+            <li>Premium Fruit Delivery</li>
+            <li>Fruit Gift Subscription</li>
+            <li>Gift Reminder Service</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Location</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>0203 961 9781</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>support@foodflowermarket.co.uk</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Unit 53 Barking Industrial Park,<br>Alfreds Way, Barking IG11 0TJ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Food Flower Market. All Rights Reserved. Crafted for luxurious healthy gifting.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/foodflowermarket" target="_blank" rel="noopener" aria-label="Visit Instagram page"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Visit Facebook page"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Visit Pinterest page"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Tab switching logic for Pricing
+    function togglePricing(cycle) {
+      const btnMonthly = document.getElementById('btn-monthly');
+      const btnQuarterly = document.getElementById('btn-quarterly');
+      
+      const priceOasis = document.getElementById('price-oasis');
+      const priceImperial = document.getElementById('price-imperial');
+      const priceRoyal = document.getElementById('price-royal');
+      
+      const freqOasis = document.getElementById('freq-oasis');
+      const freqImperial = document.getElementById('freq-imperial');
+      const freqRoyal = document.getElementById('freq-royal');
+      
+      if (cycle === 'monthly') {
+        btnMonthly.classList.add('active');
+        btnQuarterly.classList.remove('active');
+        
+        priceOasis.textContent = '£65.00';
+        priceImperial.textContent = '£95.00';
+        priceRoyal.textContent = '£120.00';
+        
+        freqOasis.textContent = 'Per Month';
+        freqImperial.textContent = 'Per Month';
+        freqRoyal.textContent = 'Per Month';
+      } else {
+        btnMonthly.classList.remove('active');
+        btnQuarterly.classList.add('active');
+        
+        // 10% discount prices
+        priceOasis.textContent = '£58.50';
+        priceImperial.textContent = '£85.50';
+        priceRoyal.textContent = '£108.00';
+        
+        freqOasis.textContent = 'Per Quarter';
+        freqImperial.textContent = 'Per Quarter';
+        freqRoyal.textContent = 'Per Quarter';
+      }
+    }
+
+    // Modal controls
+    function openCheckout(name, price) {
+      document.getElementById('modal-box-name').textContent = name;
+      document.getElementById('modal-box-price').textContent = price;
+      document.getElementById('checkout-modal').style.display = 'flex';
+    }
+
+    // FAQ Collapsible Logic
+    function toggleFaq(element) {
+      const parent = element.parentElement;
+      const isActive = parent.classList.contains('active');
+      
+      // Close all first
+      const allItems = document.querySelectorAll('.faq-item');
+      allItems.forEach(item => item.classList.remove('active'));
+      
+      if (!isActive) {
+        parent.classList.add('active');
+      }
+    }
+
+    // Mobile Navigation logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu-list');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isVisible = navMenu.style.display === 'flex';
+      navMenu.style.display = isVisible ? 'none' : 'flex';
+      navMenu.style.flexDirection = 'column';
+      navMenu.style.position = 'absolute';
+      navMenu.style.top = '90px';
+      navMenu.style.left = '0';
+      navMenu.style.width = '100%';
+      navMenu.style.backgroundColor = 'var(--primary-color)';
+      navMenu.style.padding = '2rem';
+      navMenu.style.gap = '1.5rem';
+      navMenu.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navMenu.removeAttribute('style');
+      }
+    });
+  </script>
+</body>
+</html>

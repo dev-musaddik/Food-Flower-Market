@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Reminder Service | Special Occasion Gifts Calendar</title>
+  <meta name="description" content="Never miss a milestone. Use our gift reminder service to schedule special occasion gifts of curated exotic fruits and flowers delivered right to their door.">
+  <meta name="keywords" content="Gift Reminder Service, Special Occasion Gifts, Exotic Fruit Subscription, Curated Gift Baskets, Premium Fruit Delivery">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" id="nav-logo-link">
+        <img src="images/logo.jpg" alt="Food Flower Market Logo" class="logo-img">
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link" id="link-home">Home</a></li>
+          <li><a href="subscription.html" class="nav-link" id="link-subscription">Subscription Boxes</a></li>
+          <li><a href="calendar.html" class="nav-link active" id="link-calendar">Gifting Calendar</a></li>
+          <li><a href="about.html" class="nav-link" id="link-about">About Us</a></li>
+          <li><a href="contact.html" class="nav-link" id="link-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="subscription.html" class="btn btn-gold" id="header-cta-btn">Subscribe Now</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Header -->
+    <section class="contact-hero-banner" aria-label="Calendar Banner">
+      <div class="container">
+        <span class="hero-badge" style="background-color: rgba(197, 168, 128, 0.15); color: var(--accent-gold); border-color: var(--accent-gold);">Worry-Free Planning</span>
+        <h1 style="margin-top: 0.5rem; margin-bottom: 1rem;">Automated Gift Reminder Service</h1>
+        <p style="max-width: 700px; margin: 0 auto; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+          Schedule your special occasion gifts ahead of time. Use our calendar tool below to set dates, customize messages, and link beautiful fruit and floral baskets.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Calendar Workspace -->
+    <section class="section" id="calendar-workspace">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Select Dates & Create Reminders</h2>
+          <p>Click any date on the calendar below to pre-populate the reminder form. Schedule customized exotic fruit gifts with automated alerts.</p>
+        </div>
+
+        <div class="calendar-full-grid">
+          <!-- Interactive Calendar Grid -->
+          <div class="interactive-calendar-box" id="calendar-widget-box">
+            <div class="cal-header">
+              <span class="cal-month" id="calendar-current-month">June 2026</span>
+              <div class="cal-nav">
+                <button class="cal-nav-btn" onclick="alert('Mockup features June 2026 only for demonstration.')" aria-label="Show Previous Month"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="cal-nav-btn" onclick="alert('Mockup features June 2026 only for demonstration.')" aria-label="Show Next Month"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+            </div>
+            
+            <div class="calendar-large">
+              <!-- Header Row -->
+              <div class="cal-day-label">Monday</div>
+              <div class="cal-day-label">Tuesday</div>
+              <div class="cal-day-label">Wednesday</div>
+              <div class="cal-day-label">Thursday</div>
+              <div class="cal-day-label">Friday</div>
+              <div class="cal-day-label">Saturday</div>
+              <div class="cal-day-label">Sunday</div>
+              
+              <!-- Days (June 2026 starts on a Monday) -->
+              <div class="calendar-large-day" onclick="selectCalendarDate(1, 'Mother\'s Birthday')">
+                <span class="day-number">1</span>
+                <span class="day-event-tag">Mother's Birthday</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(2)">
+                <span class="day-number">2</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(3)">
+                <span class="day-number">3</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(4)">
+                <span class="day-number">4</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(5)">
+                <span class="day-number">5</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(6)">
+                <span class="day-number">6</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(7)">
+                <span class="day-number">7</span>
+              </div>
+              
+              <div class="calendar-large-day" onclick="selectCalendarDate(8)">
+                <span class="day-number">8</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(9)">
+                <span class="day-number">9</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(10)">
+                <span class="day-number">10</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(11)">
+                <span class="day-number">11</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(12, 'Wedding Anniversary')">
+                <span class="day-number">12</span>
+                <span class="day-event-tag gold">Anniversary</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(13)">
+                <span class="day-number">13</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(14)">
+                <span class="day-number">14</span>
+              </div>
+              
+              <div class="calendar-large-day" onclick="selectCalendarDate(15)">
+                <span class="day-number">15</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(16)">
+                <span class="day-number">16</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(17)">
+                <span class="day-number">17</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(18)">
+                <span class="day-number">18</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(19)">
+                <span class="day-number">19</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(20)">
+                <span class="day-number">20</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(21)">
+                <span class="day-number">21</span>
+              </div>
+              
+              <div class="calendar-large-day" onclick="selectCalendarDate(22)">
+                <span class="day-number">22</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(23, 'Business Gift')">
+                <span class="day-number">23</span>
+                <span class="day-event-tag">Business Gift</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(24)">
+                <span class="day-number">24</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(25)">
+                <span class="day-number">25</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(26)">
+                <span class="day-number">26</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(27)">
+                <span class="day-number">27</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(28)">
+                <span class="day-number">28</span>
+              </div>
+              
+              <div class="calendar-large-day" onclick="selectCalendarDate(29)">
+                <span class="day-number">29</span>
+              </div>
+              <div class="calendar-large-day" onclick="selectCalendarDate(30)">
+                <span class="day-number">30</span>
+              </div>
+              <div class="calendar-large-day empty"></div>
+              <div class="calendar-large-day empty"></div>
+              <div class="calendar-large-day empty"></div>
+              <div class="calendar-large-day empty"></div>
+              <div class="calendar-large-day empty"></div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+              <h4 style="margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 1rem;">Saved Reminders This Month:</h4>
+              <ul class="features-list" id="saved-reminders-list" style="margin: 0; font-size: 0.9rem;">
+                <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-calendar-check" style="color: var(--accent-gold);"></i> <strong>June 1st:</strong> Mother's Birthday - Imperial Box</li>
+                <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-calendar-check" style="color: var(--accent-gold);"></i> <strong>June 12th:</strong> Wedding Anniversary - Royal Treat & Flora Box</li>
+                <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-calendar-check" style="color: var(--accent-gold);"></i> <strong>June 23rd:</strong> Corporate VIP Gift - Oasis Box</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Reminder Builder Form -->
+          <div class="reminder-builder-form" id="reminder-form-container">
+            <h3>Configure Gifting Reminder</h3>
+            <form id="reminder-main-form" onsubmit="saveReminderEvent(event)">
+              <div class="form-group">
+                <label for="reminder-recipient">Recipient Name</label>
+                <input type="text" id="reminder-recipient" placeholder="Recipient's Name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="reminder-date">Target Date</label>
+                <input type="text" id="reminder-date" value="June 1, 2026" required readonly>
+              </div>
+
+              <div class="form-group">
+                <label for="reminder-occasion">Occasion Type</label>
+                <select id="reminder-occasion" onchange="suggestGiftBox()">
+                  <option value="Birthday">Birthday Celebration</option>
+                  <option value="Anniversary">Wedding Anniversary</option>
+                  <option value="Corporate">Corporate / VIP Gifting</option>
+                  <option value="GetWell">Get Well / Wellness Gift</option>
+                  <option value="Holiday">Seasonal Holiday</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="reminder-gift">Suggested Gift Basket</label>
+                <select id="reminder-gift">
+                  <option value="Oasis">The Seasonal Oasis Box (£65.00)</option>
+                  <option value="Imperial" selected>The Golden Imperial Box (£95.00)</option>
+                  <option value="Royal">The Royal Treat & Flora Box (£120.00)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="reminder-message">Personal Hand-written Message</label>
+                <textarea id="reminder-message" rows="3" placeholder="Write the gift card note here..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="reminder-advance">Advance Notification</label>
+                <select id="reminder-advance">
+                  <option>7 Days Before (Recommended)</option>
+                  <option>3 Days Before</option>
+                  <option>1 Day Before</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-gold" style="width: 100%;" id="save-reminder-btn">Schedule Gifting Reminder</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How the Reminder Service Adds a Personal Touch -->
+    <section class="section section-alt" id="reminder-explanation">
+      <div class="container">
+        <div class="overview-split" style="grid-template-columns: 1fr 1.2fr;">
+          <div>
+            <span class="hero-badge" style="background-color: var(--accent-green-light); border-color: var(--accent-green); color: var(--accent-green);">The Food Flower Market Promise</span>
+            <h2>Why Our Gift Reminder Service Matters</h2>
+            <p>In our busy modern lives, forgetting key milestones is common, but it can impact personal and professional relationships. Our service is designed to add a thoughtful, luxurious touch without requiring hours of planning.</p>
+            <p>By scheduling your special occasion gifts in advance, you guarantee that a hand-packed exotic fruit box paired with matching fresh florals will arrive exactly on time.</p>
+            <p>Every delivery includes a custom, calligraphy-written envelope with your message, giving the presentation a deep, personal touch that digital greetings simply cannot duplicate.</p>
+          </div>
+          <div style="background: var(--white); border: 1px solid var(--border-color); padding: 3rem; border-radius: var(--radius-md);">
+            <h3 style="margin-bottom: 1.5rem;">How It Works: 3 Simple Steps</h3>
+            <ul class="features-list" style="margin: 0;">
+              <li style="margin-bottom: 2rem;">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <div>
+                  <h4>1. Log Your Annual Dates</h4>
+                  <p style="margin-bottom: 0; font-size: 0.95rem;">Enter birthdays, anniversaries, and holidays once. We secure them in your calendar.</p>
+                </div>
+              </li>
+              <li style="margin-bottom: 2rem;">
+                <i class="fa-solid fa-bell"></i>
+                <div>
+                  <h4>2. Receive Soft Notifications</h4>
+                  <p style="margin-bottom: 0; font-size: 0.95rem;">One week before the event, you get a short reminder email detailing the chosen fruits and floral styles.</p>
+                </div>
+              </li>
+              <li style="margin-bottom: 0;">
+                <i class="fa-solid fa-gift"></i>
+                <div>
+                  <h4>3. We Prepare and Deliver</h4>
+                  <p style="margin-bottom: 0; font-size: 0.95rem;">We select fresh Segundo Frutas mangoes and seasonal stems, handwriting your gift card for delivery.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="calendar-testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>How It Improved Their Gifting</h2>
+          <p>Read success stories from customers who shifted to our Gift Reminder Service to maintain connections.</p>
+        </div>
+        <div class="test-grid">
+          <!-- Testimonial 1 -->
+          <div class="test-card">
+            <div class="test-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"I used to purchase last-minute vouchers. Since using the Food Flower Market calendar, I scheduled all my siblings' birthdays. They receive healthy gift baskets that look spectacular. The custom calligraphy notes are incredibly elegant!"</p>
+            <div class="test-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Sarah H., marketing director, client of Food Flower Market" class="test-author-img">
+              <div class="test-author-info">
+                <h4>Sarah H.</h4>
+                <span>Edinburgh, UK</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="test-card">
+            <div class="test-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"As a business owner, client care is vital. Setting reminders for my key clients' corporate milestones means they get premium fruit delivery right on cue. It builds tremendous trust!"</p>
+            <div class="test-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Richard L., software founder, corporate client of Food Flower Market" class="test-author-img">
+              <div class="test-author-info">
+                <h4>Richard L.</h4>
+                <span>London, UK</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="test-card">
+            <div class="test-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"My parents live in Leeds while I work in London. I set up reminders for Mother's Day and Father's Day. They love the exotic fruit gifts and fresh lilies. Highly recommend this service!"</p>
+            <div class="test-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Elena K., customer of Food Flower Market" class="test-author-img">
+              <div class="test-author-info">
+                <h4>Elena K.</h4>
+                <span>Leeds, UK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section" style="background-color: var(--primary-color); color: var(--white); text-align: center;">
+      <div class="container" style="max-width: 700px;">
+        <h2 style="color: var(--white); margin-bottom: 1.5rem;">Ready to Automate Your Gift Planning?</h2>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 2.5rem;">Join our reminder system today. Schedule your first three special occasion gifts, and receive a complimentary upgrade to our Imperial Box for your first delivery.</p>
+        <a href="subscription.html" class="btn btn-gold" id="calendar-cta-subscribe">Start Your Gifting Journey</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="images/logo.jpg" alt="Food Flower Market Footer Logo" class="footer-logo">
+          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Food Flower Market delivers the ultimate premium luxury gifting experience. Curated exotic fruits paired with artisanal fresh blooms delivered straight to your door.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="subscription.html">Subscription Boxes</a></li>
+            <li><a href="calendar.html">Gifting Calendar</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Keywords</h4>
+          <ul class="footer-links" style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+            <li>Exotic Fruit Subscription</li>
+            <li>Healthy Gift Baskets</li>
+            <li>Premium Fruit Delivery</li>
+            <li>Fruit Gift Subscription</li>
+            <li>Gift Reminder Service</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Location</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>0203 961 9781</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>support@foodflowermarket.co.uk</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Unit 53 Barking Industrial Park,<br>Alfreds Way, Barking IG11 0TJ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Food Flower Market. All Rights Reserved. Crafted for luxurious healthy gifting.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/foodflowermarket" target="_blank" rel="noopener" aria-label="Visit Instagram page"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Visit Facebook page"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Visit Pinterest page"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Click date logic to prefill form
+    function selectCalendarDate(dayNum, existingEventName = '') {
+      // Highlights selected date in the widget
+      const allDays = document.querySelectorAll('.calendar-large-day');
+      allDays.forEach(day => {
+        day.style.borderColor = 'var(--border-color)';
+        day.style.backgroundColor = '';
+      });
+      
+      // Target active day element
+      const selectedIndex = dayNum - 1; // 0-based
+      if (allDays[selectedIndex]) {
+        allDays[selectedIndex].style.borderColor = 'var(--accent-gold)';
+        allDays[selectedIndex].style.backgroundColor = 'var(--bg-sand)';
+      }
+      
+      // Update form values
+      const dateInput = document.getElementById('reminder-date');
+      dateInput.value = 'June ' + dayNum + ', 2026';
+      
+      const recipientInput = document.getElementById('reminder-recipient');
+      const occasionSelect = document.getElementById('reminder-occasion');
+      const messageText = document.getElementById('reminder-message');
+      
+      if (existingEventName) {
+        recipientInput.value = existingEventName.split("'")[0] || 'My Recipient';
+        if (existingEventName.toLowerCase().includes('birthday')) {
+          occasionSelect.value = 'Birthday';
+        } else if (existingEventName.toLowerCase().includes('anniversary')) {
+          occasionSelect.value = 'Anniversary';
+        } else {
+          occasionSelect.value = 'Corporate';
+        }
+      } else {
+        recipientInput.value = '';
+        occasionSelect.value = 'Birthday';
+      }
+      
+      suggestGiftBox();
+      recipientInput.focus();
+    }
+
+    // Dynamic Suggestion based on occasion type
+    function suggestGiftBox() {
+      const occasion = document.getElementById('reminder-occasion').value;
+      const giftSelect = document.getElementById('reminder-gift');
+      
+      if (occasion === 'Anniversary') {
+        giftSelect.value = 'Royal'; // Suggest Royal Treat box
+      } else if (occasion === 'Corporate' || occasion === 'Holiday') {
+        giftSelect.value = 'Imperial'; // Suggest Imperial Box
+      } else {
+        giftSelect.value = 'Oasis'; // Suggest Oasis Box
+      }
+    }
+
+    // Save Reminder Event
+    function saveReminderEvent(e) {
+      e.preventDefault();
+      const recipient = document.getElementById('reminder-recipient').value;
+      const date = document.getElementById('reminder-date').value;
+      const gift = document.getElementById('reminder-gift').options[document.getElementById('reminder-gift').selectedIndex].text.split(' (£')[0];
+      
+      // Add to list dynamically
+      const list = document.getElementById('saved-reminders-list');
+      const newItem = document.createElement('li');
+      newItem.style.marginBottom = '0.5rem';
+      newItem.style.animation = 'fadeIn 0.5s ease forwards';
+      newItem.innerHTML = `<i class="fa-solid fa-calendar-check" style="color: var(--accent-gold);"></i> <strong>${date.split(',')[0]}:</strong> ${recipient}'s Event - Scheduled ${gift}`;
+      list.appendChild(newItem);
+      
+      alert(`Gifting reminder saved successfully! We'll alert you 7 days before ${date}.`);
+      document.getElementById('reminder-main-form').reset();
+      document.getElementById('reminder-date').value = 'June 1, 2026';
+    }
+
+    // Mobile Navigation logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu-list');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isVisible = navMenu.style.display === 'flex';
+      navMenu.style.display = isVisible ? 'none' : 'flex';
+      navMenu.style.flexDirection = 'column';
+      navMenu.style.position = 'absolute';
+      navMenu.style.top = '90px';
+      navMenu.style.left = '0';
+      navMenu.style.width = '100%';
+      navMenu.style.backgroundColor = 'var(--primary-color)';
+      navMenu.style.padding = '2rem';
+      navMenu.style.gap = '1.5rem';
+      navMenu.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navMenu.removeAttribute('style');
+      }
+    });
+  </script>
+</body>
+</html>

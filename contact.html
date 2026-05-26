@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Fruit Delivery Team | Food Flower Market Support</title>
+  <meta name="description" content="Get in touch with our contact fruit delivery team. Contact Food Flower Market customer support for custom orders, corporate gifting, and inquiries.">
+  <meta name="keywords" content="Contact Fruit Delivery, Customer Support, Exotic Fruit Subscription, Healthy Gift Baskets, Premium Fruit Delivery">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" id="nav-logo-link">
+        <img src="images/logo.jpg" alt="Food Flower Market Logo" class="logo-img">
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link" id="link-home">Home</a></li>
+          <li><a href="subscription.html" class="nav-link" id="link-subscription">Subscription Boxes</a></li>
+          <li><a href="calendar.html" class="nav-link" id="link-calendar">Gifting Calendar</a></li>
+          <li><a href="about.html" class="nav-link" id="link-about">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active" id="link-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="subscription.html" class="btn btn-gold" id="header-cta-btn">Subscribe Now</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="contact-hero-banner" aria-label="Contact Page Banner">
+      <div class="container">
+        <span class="hero-badge" style="background-color: rgba(197, 168, 128, 0.15); color: var(--accent-gold); border-color: var(--accent-gold);">Customer Support Desk</span>
+        <h1 style="margin-top: 0.5rem; margin-bottom: 1rem;">Contact Fruit Delivery & Gifting Specialists</h1>
+        <p style="max-width: 700px; margin: 0 auto; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+          Have questions about custom boxes, corporate orders, or active subscriptions? Get in touch with our customer support team today.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Grid Section -->
+    <section class="section" id="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left Column: Contact Info & Map -->
+          <div class="contact-info-panel" id="contact-info-card">
+            <div>
+              <h2>Get In Touch</h2>
+              <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem;">Reach out via phone, email, or visit our headquarters. We are here to assist with all details of your premium fruit delivery.</p>
+              
+              <ul class="contact-details">
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <h4>Phone & Hotline</h4>
+                    <p>0203 961 9781</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  <div>
+                    <h4>Email Support</h4>
+                    <p>support@foodflowermarket.co.uk</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <h4>Headquarters & Facility</h4>
+                    <p>Unit 53 Barking Industrial Park,<br>Alfreds Way, Barking IG11 0TJ</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <h4>Gifting Support Hours</h4>
+                    <p>Monday - Saturday: 8:00 AM - 6:00 PM<br>Sunday: Closed (Ripeness Inspection Day)</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Stylized Map Container -->
+            <div class="map-container" aria-label="Location Map">
+              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800" alt="Stylized luxury map location of Food Flower Market in Barking" class="map-img">
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Message Form -->
+          <div class="contact-form-panel" id="contact-form-card">
+            <h3>Send Customer Support A Message</h3>
+            <form id="contact-message-form" onsubmit="event.preventDefault(); alert('Message sent successfully! Our customer support team will reply within 4 hours.'); this.reset();">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" placeholder="John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone">Contact Number</label>
+                <input type="tel" id="contact-phone" placeholder="07123 456789">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Inquiry Subject</label>
+                <select id="contact-subject">
+                  <option>General Customer Support</option>
+                  <option>Custom Gift Baskets / Floral Swaps</option>
+                  <option>Corporate & Bulk Gifting</option>
+                  <option>Gifting Calendar Reminder Issue</option>
+                  <option>Subscription Plan Adjustments</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Your Message</label>
+                <textarea id="contact-message" rows="5" placeholder="How can we help make your gifting experience perfect?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold" style="width: 100%;" id="contact-submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketing Flyer Section -->
+    <section class="section section-alt" id="flyer-display">
+      <div class="container">
+        <div class="overview-split" style="grid-template-columns: 1fr 1fr; align-items: center;">
+          <div>
+            <span class="hero-badge" style="background-color: var(--accent-green-light); border-color: var(--accent-green); color: var(--accent-green);">Direct Delivery Services</span>
+            <h2>Our Service Directory & Contact Details</h2>
+            <p>We deliver more than just exotic fruit subscription boxes. From our central Barking hub, we service coffee supply, fresh bakery items, standard fruits & vegetables, premium pantries, and custom flower installations.</p>
+            <p>Check out our contact card flyer on the right. You can order online or call our support line directly to build customized subscription packages matching your personal gifting guidelines.</p>
+            
+            <div style="margin-top: 2rem;">
+              <a href="tel:02039619781" class="btn btn-primary" style="gap:0.75rem;"><i class="fa-solid fa-phone"></i> Call 0203 961 9781</a>
+            </div>
+          </div>
+          <!-- Flyer Image Container -->
+          <div style="background: var(--white); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+            <img src="images/banner_contact.jpg" alt="Food Flower Market direct ordering card featuring Coffee, Bakery, Fruit & Veg, Pantry, and Flowers & Plants delivery options" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Page FAQs -->
+    <section class="section" id="contact-faqs">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Customer Support FAQs</h2>
+          <p>Quick answers to common questions about managing deliveries, corporate accounts, and customized box arrangements.</p>
+        </div>
+        
+        <div class="faq-grid" id="faq-accordion-group">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>What are the corporate gifting options and discounts?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We provide custom packages for corporate clients wishing to deliver healthy gift baskets to employees or key stakeholders. For ongoing orders of 10+ boxes per month, we offer a dedicated account manager, custom branded cards, and up to 15% discount. Contact our corporate support division via the form above for quotes.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>Can I temporarily pause or change the delivery address for my subscription?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes. You can pause, resume, or redirect deliveries through your online customer portal. Changes must be finalized at least 4 days before the scheduled dispatch date to guarantee our team redirects the fresh shipment appropriately.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>What zones do your direct fleet vehicles cover?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Our direct, temperature-controlled delivery vans cover Greater London, Essex, and Kent (dispatched from our Barking hub). For areas outside these zones, we use partner express cold-chain couriers to deliver exotic fruit subscription boxes within 24 hours of packing.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h3>What is your refund policy if the fruit is damaged or unsatisfactory?</h3>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We guarantee 100% ripeness and freshness. If a fruit arrives damaged or below your expectations, email a photo of the item to customer support within 24 hours of delivery. We will issue a replacement or credit your account for the item immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="images/logo.jpg" alt="Food Flower Market Footer Logo" class="footer-logo">
+          <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Food Flower Market delivers the ultimate premium luxury gifting experience. Curated exotic fruits paired with artisanal fresh blooms delivered straight to your door.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="subscription.html">Subscription Boxes</a></li>
+            <li><a href="calendar.html">Gifting Calendar</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Keywords</h4>
+          <ul class="footer-links" style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+            <li>Exotic Fruit Subscription</li>
+            <li>Healthy Gift Baskets</li>
+            <li>Premium Fruit Delivery</li>
+            <li>Fruit Gift Subscription</li>
+            <li>Gift Reminder Service</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Location</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>0203 961 9781</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>support@foodflowermarket.co.uk</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Unit 53 Barking Industrial Park,<br>Alfreds Way, Barking IG11 0TJ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Food Flower Market. All Rights Reserved. Crafted for luxurious healthy gifting.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/foodflowermarket" target="_blank" rel="noopener" aria-label="Visit Instagram page"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Visit Facebook page"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Visit Pinterest page"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // FAQ Collapsible Logic
+    function toggleFaq(element) {
+      const parent = element.parentElement;
+      const isActive = parent.classList.contains('active');
+      
+      // Close all first
+      const allItems = document.querySelectorAll('.faq-item');
+      allItems.forEach(item => item.classList.remove('active'));
+      
+      if (!isActive) {
+        parent.classList.add('active');
+      }
+    }
+
+    // Mobile Navigation logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu-list');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isVisible = navMenu.style.display === 'flex';
+      navMenu.style.display = isVisible ? 'none' : 'flex';
+      navMenu.style.flexDirection = 'column';
+      navMenu.style.position = 'absolute';
+      navMenu.style.top = '90px';
+      navMenu.style.left = '0';
+      navMenu.style.width = '100%';
+      navMenu.style.backgroundColor = 'var(--primary-color)';
+      navMenu.style.padding = '2rem';
+      navMenu.style.gap = '1.5rem';
+      navMenu.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navMenu.removeAttribute('style');
+      }
+    });
+  </script>
+</body>
+</html>
