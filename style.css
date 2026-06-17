@@ -1538,6 +1538,14 @@ img {
   display: inline;
 }
 
+/* Custom grid templates to replace inline styling */
+.style-calendar-split {
+  grid-template-columns: 1fr 1.2fr;
+}
+.style-contact-split {
+  grid-template-columns: 1fr 1fr;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .footer-grid {
@@ -1556,8 +1564,10 @@ img {
   .calendar-split, 
   .calendar-full-grid, 
   .about-story, 
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .contact-grid,
+  .style-calendar-split,
+  .style-contact-split {
+    grid-template-columns: 1fr !important;
     gap: 4rem;
   }
   
